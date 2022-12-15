@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Night Club - X</title>
+    </head>
+    
+    <body>
+
+        <ul>
+            <li>Fulan</li>
+            <li>Fulanah</li>
+            <li>John Doe</li>
+        </ul>
+
+        <h1 id="fulan">
+            Fulan
+            <span>Test</span>
+        </h1>
+        
+        <a href="https://youtube.com" id="link">Link</a>
+
+        <input type="text" value="Fulanah" id="fulanah">
+        <button class="submit">Submit</button>
+        
+        <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+
+            let li = $("li");
+            let lis = document.querySelector("li");
+            console.log(li)
+            console.log(li.eq(-2).html());
+
+            let fulan = $("#fulan");
+            let fulanah = $("#fulanah");
+            let fulanChild = fulan.children
+
+            fulanah.val("Agung")
+
+            console.log(fulanah.val());
+            let submit = $(".submit");
+            let buttonKotak = $(".submit")[0];
+            let buttonEq = $(".submit").eq(0);
+            // console.log(buttonKotak.length > 0);
+            console.log(buttonEq.length <= 1);
+
+            $(".submit").click(function() {
+                alert(fulanah.val());
+            })
+            
+            // $(".submit").on("click", function() {
+            //     alert(fulanah.val());
+            // })
+
+        </script>
+
+    </body>
+</html>
